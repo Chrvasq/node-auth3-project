@@ -6,7 +6,8 @@ const secrets = require("../config/secrets");
 const auth = require("../auth/auth-required-middleware");
 
 router.get("/users", auth, async (req, res) => {
-  const users = await Users.find();
+  const { department } = req.decodedJwt;
+  const users = await Users.findByDepartment({ department });
 
   users
     ? res.status(200).json(users)
