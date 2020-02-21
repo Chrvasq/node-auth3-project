@@ -2,12 +2,18 @@
   "name": "node-auth3-project",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "start": "node index.js"
+  },
   "repository": "https://github.com/Chrvasq/node-auth3-project.git",
   "author": "Chris Vasquez <chrvasq@outlook.com>",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "helmet": "^3.21.2",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.20.10",
     "sqlite3": "^4.1.1"
